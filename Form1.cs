@@ -125,11 +125,11 @@ public class Form1 : Form
 		HttpClient httpClient = new HttpClient();
 		string text2 = text;
 		Updatetb(text);
-		string requestUri = "https://docs.google.com/spreadsheets/d/1qwJdDLNhYbdDBXZDIQIuXvXC1El6ShD6-yy1UPqbzl4/edit?gid=0#gid=0";
+		string requestUri = "https://docs.google.com/spreadsheets/d/1J0qUxZW-up12oNMDxvs0Hj-KDRi2caG9XxRXsDn6vD4/edit?gid=0#gid=0";
 		Match match = Regex.Match(httpClient.GetAsync(requestUri).Result.Content.ReadAsStringAsync().Result.ToString().ToString(), text2 + ".*?(?=ok)");
 		if (match == Match.Empty)
 		{
-			UpdateLabel("Lh Duy milano");
+			UpdateLabel("tahp");
 			Updatetb(text);
 			guna2ProgressBar1.Value = 0;
 			timer1.Stop();
@@ -147,7 +147,7 @@ public class Form1 : Form
 		DateTime value = new DateTime(year, month, day);
 		if ((int)Math.Ceiling(new DateTime(year2, month2, day2).Subtract(value).TotalDays) <= 0)
 		{
-			label1.Text = "Lh duy milano";
+			label1.Text = "tahp";
 		}
 		else
 		{
@@ -184,7 +184,7 @@ public class Form1 : Form
 			JObject jObject = JObject.Parse(Decrypt(value));
 			if (!(jObject["status"].ToString() == "true") || !(jObject["expired"].ToString() == "false"))
 			{
-				UpdateLabel("Lh duy milano");
+				UpdateLabel("tahp");
 				guna2ProgressBar1.Value = 0;
 				timer1.Stop();
 				return;
@@ -210,7 +210,7 @@ public class Form1 : Form
 		}
 		else
 		{
-			UpdateLabel("Lh duy milano");
+			UpdateLabel("tahp");
 			guna2ProgressBar1.Value = 0;
 			timer1.Stop();
 		}
@@ -227,12 +227,12 @@ public class Form1 : Form
 
 	private void guna2CircleButton1_Click(object sender, EventArgs e)
 	{
-		Process.Start("https://www.facebook.com/profile.php?id=100004387351588&mibextid=LQQJ4d");
+		Process.Start("https://www.facebook.com/tahP092");
 	}
 
 	private void guna2CircleButton2_Click(object sender, EventArgs e)
 	{
-		Process.Start("https://zalo.me/0846701333");
+		Process.Start("https://zalo.me/0382251471");
 	}
 
 	private void timer1_Tick(object sender, EventArgs e)
@@ -400,7 +400,7 @@ public class Form1 : Form
 		base.Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
 		base.Name = "Form1";
 		base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-		this.Text = "ACTIVE_GPM_Duy Milano";
+		this.Text = "ACTIVE_GPM_tahp";
 		base.Load += new System.EventHandler(Form1_Load);
 		base.ResumeLayout(false);
 		base.PerformLayout();
